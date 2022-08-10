@@ -1,0 +1,373 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Paella a domicilio en la Ciudad de México. Paella Azafrán.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/jquery.modal.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+		<script src="assets/js/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="assets/js/gmaps.js"></script>
+		<script type="text/javascript">
+			var map;
+			$(document).ready(function(){
+			map = new GMaps({
+				div: '#map',
+				lat: 19.429808,
+				lng: -99.169056
+			});
+			map.addMarker({
+				lat: 19.429808,
+				lng: -99.169056,
+				title: 'Paella Azafrán. Ciudad de México',
+				infoWindow: {
+				content: '<p style="font-size:smaller"><img src="images/logo-paellaazafran-markermap.png" /><br/><strong>Paella Azafrán</strong><br/>El placer de la paella con <br/>el sabor, aroma y color <br/>del auténtico azafrán.</p>',
+				}
+			});
+			});
+			$(document).ready(function(){
+				var url = GMaps.staticMapURL({
+					size: [900, 500],
+					lat: 19.429808,
+					lng: -99.169056,
+					markers: [
+						{lat: 19.429808, lng: -99.169056},
+						{lat: 19.429808, lng: -99.169056, size: 'small'},
+						{lat: 19.429808, lng: -99.169056, color: 'blue'}
+					]
+				});
+				$('<img/>').attr('src', url).appendTo('#map');
+			});
+		</script>
+	</head>
+	<body>
+	
+		<!-- Wrapper -->
+			<div id="wrapper" class="bg">
+				<!-- Header -->
+					<!-- <header id="header">
+						<a href="index.html" class="link-without-bottom-line padding-left-1"><img src="images/logotype-w&b-paellaazafran.svg" alt="Paella Azafrán"></a>
+						<nav class="links">
+							<ul>
+								<li><a href="#">Restaurante</a></li>
+								<li><a href="#">Pedidos especiales</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header> -->
+
+				<!-- Menu -->
+					<!-- <section id="menu"> -->
+						<!-- Links -->
+							<!-- <section>
+								<ul class="links">
+									<li>
+										<a href="#restaurant">
+											<h3>Restaurante</h3>
+										</a>
+									</li>
+									<li>
+										<a href="#orders">
+											<h3>Pedidos especiales</h3>
+										</a>
+									</li>
+								</ul>
+							</section> -->
+					<!-- </section> -->
+
+					<!-- Intro -->
+					<section class="row bordered-frame align-center" style="margin-left:0">
+						<div class="6u -1u 12u(xsmall)">
+							<section class="content-frame alpha">
+								<img src="images/logo-colour-paellaazafran.svg" alt="Logo Paella Azafrán" />
+								<header>
+									<h2>Paella Azafrán</h2>
+									<h3>El placer de la paella a domicilio con el sabor, aroma y color del auténtico azafrán.</h3>
+								</header>
+							</section>
+						</div>
+						<div class="4u 12u(xsmall)">
+							<section class="content-frame white_back">
+								<span class="avatar"><img src="images/avatar.png" alt="¡Pide tu paella!"></span>
+								<h2>¡Pídela!</h2>
+								<h1>55 52 12 13 33</h1>
+								<ul class="icons">
+									<li><a href="#" class="fa-phone"> Celular: </a></li>
+									<li><h2>55 21 29 65 22</h2></li>
+								</ul>
+							</section>
+						</div>
+					</section>
+				<!-- Main -->
+					<div id="main">
+						<section>
+							<div class="row" style="margin-left:1px">
+								<div class="4u 6u(small) 12u(xsmall) white_back lightborder product padding-right-1 margin-top-1">
+									<a href="#ex2" rel="modal:open" class="image fit">
+										<img src="images/photo-product-traditional01.jpg" alt="" />
+									</a>
+									<div class="product-description">
+										<h3>Paella Azafrán</h3>
+										<h1><a href="#ex2" rel="modal:open">tradicional</a></h1>
+										<h2>$200.00</h2>
+										<p>800 grs.</p>
+									</div>
+									<div id="ex2" class='modal' style="display:none;">
+										<div class="align-center">
+											<h2>PAELLA AZAFRÁN TRADICIONAL</h2>
+											<object data="images/icon-price-traditional.svg" type="image/svg+xml"  style="z-index: 1000;">
+											</object>
+										</div>
+				            <img class="image fit" src="images/photos-slideshow-traditional02.jpg" style="margin-top: -93px;z-index: -1000;">
+				            <div>
+				              <h3>800 grs. de placer amarillo azafrán:</h3>
+				              <p>Un muslo de pollo, lomo de cerdo en brocheta, chorizo
+												tipo cantimpalo, camarones, chistorra, almejas, pimiento
+												morrón rojo y verde, chícharo  y ejote. Con un toque generoso
+												del ingrediente clave de la auténtica paella: azafrán español de la mejor calidad.
+											</p>
+											<p>
+												<small>Nota: Las imágenes son ilustrativas y pueden variar en relación al producto final.</small>
+											</p>
+				            </div>
+				          </div>
+								</div>
+								<div class="4u 6u(small) 12u(xsmall) white_back lightborder product padding-right-1 margin-top-1">
+									<a href="#ex3" rel="modal:open" class="image fit">
+										<img src="images/photo-product-premium01.jpg" alt="" />
+									</a>
+									<div class="product-description">
+										<h3>Paella Azafrán</h3>
+										<h1><a href="#ex3" rel="modal:open">premium</a></h1>
+										<h2>$250.00</h2>
+										<p>800 grs.</p>
+									</div>
+									<div id="ex3" class='modal' style="display:none;">
+										<div class="align-center">
+											<h2>PAELLA AZAFRÁN PREMIUM</h2>
+											<object data="images/icon-price-premium.svg" type="image/svg+xml"  style="z-index: 1000;">
+											</object>
+										</div>
+				            <img class="image fit" src="images/photos-slideshow-premium03.jpg" style="margin-top: -93px;z-index: -1000;">
+				            <div>
+				              <h3>800 grs. de la combinación perfecta:</h3>
+				              <p>
+				              	Todo el deleite de nuestra Paella Azafrán Tradicional con
+												más camarones, frutos del mar como pueden ser aros de calamar, mejillones y callos de almejas.
+											</p>
+											<p>
+												<small>Nota: Las imágenes son ilustrativas y pueden variar en relación al producto final.</small>
+											</p>
+				            </div>
+				          </div>
+								</div>
+								<div class="4u 6u(small) 12u(xsmall) white_back lightborder product padding-right-1 margin-top-1">
+									<a href="#ex4" rel="modal:open" class="image fit">
+										<img src="images/photo-product-cero01.jpg" alt="" />
+									</a>
+									<div class="product-description">
+										<h3>Paella Azafrán</h3>
+										<h1><a href="#ex4" rel="modal:open">cero complicaciones</a></h1>
+										<h2>$135.00/$99.90</h2>
+										<p>700 grs./500 grs.</p>
+									</div>
+									<div id="ex4" class='modal' style="display:none;">
+										<div class="align-center">
+											<h2>PAELLA AZAFRÁN CERO COMPLICACIONES</h2>
+											<object data="images/icon-price-cerobigsmall.svg" type="image/svg+xml"  style="z-index: 1000;">
+											</object>
+					            <img class="image fit" src="images/photos-slideshow-cero01.jpg" style="margin-top: -93px;z-index: -1000;">
+											<object data="images/icon-pack-cero.svg" type="image/svg+xml" class="large-offset-1 large-4 small-offset-1 small-10 icon" width="185">
+											</object>
+										</div>
+										<div>
+				              <h3>Todo el sabor sin complicaciones:</h3>
+				              <p>
+				              	¿Buscas una opción deliciosa y diferente para comer en
+												tu oficina? Prueba nuestra Paella Azafrán Cero Complicaciones con el pollo deshuesado. La orden incluye un refresco de lata.
+				              </p>
+											<p><i class="fa fa-exclamation-circle"></i> Disponible sólo de miércoles a viernes.</p>
+				              <p>
+				              	<small>Nota: Las imágenes son ilustrativas y pueden variar en relación al producto final.</small>
+				              </p>
+				            </div>
+				          </div>
+								</div>
+							</div>
+							<div class="6u -3u 10u(small) 12u(xsmall) align-center padding-top-1">
+								<object type="image/svg+xml" data="images/icon-small_black_homedelivery.svg" class="avatar">
+				        </object>
+								<header>
+									<h2>Entrega a domicilio sin costo extra</h2>
+									<h2>En pedidos mayores a 10 órdenes</h2>
+									<h3>en la ciudad de México</h3>
+								</header>
+							</div>
+						</section>
+						<hr>
+						<section id="restaurant">
+							<div class="container">
+								<div class="row">
+									<div class="4u -1u 12u(small)">
+										<img src="images/photo-restaurant-small-00.jpg" alt="Restaurante Paella Azafrán" class="image fit inline" />
+									</div>
+									<div class="6u 12u(small)">
+										<h4>Vísitanos</h4>
+	 									<h3>Restaurante</h3>
+										<p><i class="fa fa-usd"></i> Pago sólo en efectivo</p>
+	 									<object type="image/svg+xml" data="images/icon-address.svg" class="padding-right-1"></object>
+	 									<p class="inline">Río Tíber 86 casi esquina Río Pánuco Colonia Cuauhtémoc (a dos cuadras del Ángel de la Independencia) Ciudad de México.</p>
+	 									<div class="clear margin-right-1">
+	 										<object type="image/svg+xml" data="images/icon-openinghours.svg" class="padding-right-1 margin-top-1"></object>
+	 										<p class="inline">De miércoles a domingo de 13:00 a 16:00 horas (o hasta agotar existencias)</p>
+	 									</div>
+										<br>
+										<p class="row message-frame accented-back-white-type">
+											<span><i class="fa fa-exclamation-circle"></i> Importante</span>
+											<br>
+											<br>
+											<span>
+												¿Tienes pensado venir a visitarnos? Por favor
+											</span>
+											<br>
+											<em>LLAMA ANTES PARA APARTAR TU PAELLA</em>
+											<br>
+											<span>ya sea que la degustes aquí o que la pidas para llevar.</span>
+										</p>
+									</div>
+								</div>
+								<br>
+								<div class="row">
+									<div id="map" class="10u -1u 12u(small)">
+										Río Tíber 86 casi esquina Río Pánuco Colonia Cuauhtémoc
+									</div>
+								</div>
+							</div>
+						</section>
+						<hr>
+						<section id="orders">
+							<div class="row align-center">
+								<div class="10u -1u">
+									<div class="row">
+										<div class="meta 6u 12u(small) bordered-frame relative">
+											<object type="image/svg+xml" data="images/icon-medium_colour_specialhomedeliverychef.svg" class="avatar"></object>
+											<h2><a href="#ex5" rel="modal:open">Pedidos especiales</a></h2>
+											<p class="back-frame">Paella Azafrán en dos deliciosas versiones: <br>Tradicional o Premium.</p>
+											<br>
+											<p class="message-frame accented-back-white-type absolute bottom"><i class="fa fa-arrow-right"></i> Haz tu pedido con un mínimo de 24 horas de anticipación.
+												<br>
+												<br>
+												<i class="fa fa-usd"></i> Pago sólo en efectivo
+											</p>
+										</div>
+										<div class="meta 6u 12u(small) bordered-frame relative" style="height:346px">
+											<object type="image/svg+xml" data="images/icon-medium_colour_homedelivery.svg" class="avatar"></object>
+											<h2>¡Gratis!</h2>
+											<h3>entrega en toda la Ciudad de México.</h3>
+											<p class="message-frame accented-back-white-type absolute bottom"><i class="fa fa-arrow-right"></i> En pedidos a partir de 10 órdenes.
+												<br>
+												<br>
+												<i class="fa fa-usd"></i> Pago sólo en efectivo
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<div id="ex5" class='modal' style="display:none;">
+							<div>
+								<h2 class="align-center">Pedidos especiales</h2>
+								<h4>A partir de 10 órdenes, con un mínimo de 24 horas de anticipación.</h4>
+								<p>Paella Azafrán en dos deliciosas versiones: <em>Tradicional</em> o <em>Premium</em>.</p>
+								<h4>Pide tu Paella Azafrán en tres pasos:</h4>
+								<ol type="1">
+									<li>Llámanos al 52 12 13 33 o al 044 55 64 48 89 00</li>
+									<li>Realiza la mitad de tu pago
+										<ul>
+											<li>Depósito Bancario en sucursal*</li>
+											<li>Transferencia Bancaria*</li>
+											<li>Efectivo</li>
+										</ul>
+									</li>
+									<li>Recibiremos la segunda mitad de tu pago en efectivo a contraentrega.</li>
+								</ol>
+								<p><strong>¡Buen provecho!</strong></p>
+								<h4>Por favor toma en cuenta las siguientes CONDICIONES:</h4>
+								<ul>
+									<li>No procesaremos tu pedido hasta que no esté plenamente aplicado el pago de tu anticipo.</li>
+									<li>No podemos cancelar órdenes una vez que hemos recibido tu anticipo y procesado tu pedido. Puesto que —para asegurar su frescura— todos los ingredientes de tu Paella Azafrán se compran expresamente para ti y tus invitados. No tenemos un almacén al que puedan ser devueltos.</li>
+									<li>Solicitamos un <strong>depósito de $1,000.00 MN</strong> por el préstamo de la paella (el recipiente). El monto te será devuelto en su totalidad, al regresar el recipiente —sin daños— al término de tu reunión.</li>
+								</ul>
+								<p><small>Si requieres información adicional envíanos un mail a <a href="mailto:infopaellaazafran@gmail.com">infopaellaazafran@gmail.com</a></small></p>
+								<p><small><em>* Al hacer tu pedido, te daremos por teléfono o email, nuestros datos bancarios.</em></small></p>
+							</div>
+						</div>
+					<section>
+					<!-- About -->
+							<section class="blurb 8u -2u 12u(small)">
+								<h1>Desde 1970</h1>
+								<h2>Pasión por una buena paella azafranada.</h2>
+								<p>
+									Nuestra abuela llegó al país hace casi un siglo, proveniente de El Campanar, Valencia. Su paella
+									sencilla pero deliciosa con pollo, conejo, algunos vegetales
+									y por supuesto, auténtico azafrán, se
+									fue transformando en nuestra receta actual, que tenemos el gusto de compartir desde 1970.
+									<br>
+									Visítanos o llámanos, estamos a tu servicio.
+								</p>
+							</section>
+
+						<!-- Footer -->
+						<section id="footer">
+							<ul class="icons">
+								<li><a href="https://www.facebook.com/PaellaAzafran/" target="_blank" class="fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="mailto:infopaellaazafran@gmail.com" class="fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+							<div id="ex1" class='modal' style="display:none;">
+						    <p>En cumplimiento con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, PAELLA AZAFRÁN le informa que actúa como responsable de sus datos personales, así como los términos y condiciones del <strong>Aviso de Privacidad de Datos Personales</strong> ("Aviso de Privacidad") de PAELLA AZAFRÁN
+									Los datos que recopilamos los destinamos únicamente a los siguientes propósitos:</p>
+									<ol type="I">
+										<li>fines de identificación y verificación,</li>
+										<li>contacto,</li>
+										<li>promoción de platillos</li>
+										<li>para hacerle llegar ofertas de forma personalizada y prestarle servicios más apropiados por ejemplo, para hacerle recomendaciones y mostrarle el contenido de los servicios de PAELLA AZAFRÁN y los platillos que existen en nuestro restaurante.</li>
+									</ol >
+									<p>PAELLA AZAFRÁN tiene implementadas medidas de seguridad administrativas, técnicas y físicas para proteger sus datos personales, mismas que igualmente exigimos sean cumplidas por los proveedores de servicios que contratamos.
+										Usted podrá contactarnos en cualquier momento a través de nuestro correo electrónico infopaellaazafran@gmail.com o directamente en nuestro restaurante ubicado en Río Tíber 86 casi esquina Río Pánuco Colonia Cuauhtémoc México D.F.
+										A partir del 6 de enero de 2012 podrá iniciar el procedimiento de protección de derechos de acceso, rectificación, cancelación y oposición (A.R.C.O) al tratamiento de sus datos personales mediante solicitud por escrito que será enviada al correo electrónico infopaellaazafran@gmail.com misma que deberá contener por lo menos: (a) nombre y domicilio u otro medio para comunicarle la respuesta a su solicitud; (b) los documentos que acrediten su identidad o, en su caso, la representación legal; (c) manifestación expresa para revocar su consentimiento al tratamiento de sus datos personales y por tanto, para que no se usen; (d) cualquier otro elemento que facilite la localización de los datos personales.
+										PAELLA AZAFRÁN podrá contratar a uno o varios terceros como proveedores de servicios seleccionados para apoyar las actividades de promoción y comercialización de nuestros servicios, manejo y administración de los datos personales que se recaban a través de nuestro sitio web www.paellaazafran.com o por cualquier otro medio distinto, así como para fines de verificación de la información que usted nos proporciona, por lo que PAELLA AZAFRÁN podría incluso transferirlos a dicho(s) tercero(s) sin un fin comercial, sino únicamente para cumplir con la prestación de los servicios contratados.
+										<strong>En ningún caso comercializaremos, venderemos o rentaremos información personal sobre usted a un tercero sin un consentimiento previo de su parte.</strong> Nos reservamos el derecho de cambiar este Aviso de Privacidad en cualquier momento. En caso de que exista algún cambio en este Aviso de Privacidad se le comunicará a través de nuestro sitio web www.paellaazafran.com
+									</p>
+								<p class="align-center"><a href="#" rel="modal:close">CERRAR</a> <br>(o presiona la tecla ESC)</p>
+							</div>
+							<p>Consulta nuestro <a href="#ex1" rel="modal:open">Aviso de Privacidad de Datos Personales</a></p>
+							<p class="copyright">&copy; Desarrollado por: <a href="mailto:mariana.soriano.licona@gmail.com">Mariana Soriano</a> Para <a href="mailto:infopaellaazafran@gmail.com">PAELLA AZAFRÁN</a></p>
+						</section>
+					</section>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

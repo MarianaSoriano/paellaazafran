@@ -1,0 +1,64 @@
+// Misc.
+	$misc: (
+		z-index-base:				10000
+	);
+
+// Duration.
+	$duration: (
+		menu:						0.5s,
+		transition:					0.2s
+	);
+
+// Size.
+	$size: (
+		element-height:				2.75em,
+		element-margin:				2em,
+		section-spacing:			3em,
+		section-spacing-small:		1.5em,
+		menu:						25em
+	);
+
+// Font.
+	$font: (
+		family:						('Source Sans Pro', Helvetica, sans-serif),
+		family-fixed:				('Courier New', monospace),
+		family-heading:				('Raleway', Helvetica, sans-serif),
+		weight:						400,
+		weight-bold:				700,
+		weight-heading:				400,
+		weight-heading-bold:		800,
+		weight-heading-extrabold:	900,
+		kerning-heading:			0.25em
+	);
+
+// Palette.
+	$colour-scale01:			#D75E2C;
+	$colour-scale02:			#F79635;
+	$colour-scale03:   	  #FFE599;
+	$accent-colour:   		#AC0320;
+	$contrast-colour: 		#8DA83F;
+	$dark:								#111111;
+	$light:								#fefefe;
+
+	$palette: (
+		//background
+		bg:									$light,
+		bg-dark:						$dark,
+		bg-alt:							fade-out($colour-scale03, .6),
+		//foreground
+		fg:									mix($light, $dark),
+		fg-bold:						mix($light, $dark, 20%),
+		fg-light:						mix($light, $dark, 90%),
+		border:							rgba($colour-scale01, 0.3),
+		border-bg:					rgba($colour-scale01, 0.075),
+		border-alt:					rgba($colour-scale02, 0.65),
+		accent:							$accent-colour,
+		contrast:           $contrast-colour,
+	);
+
+	@mixin border-radius($radius) {
+	  -webkit-border-radius: $radius;
+	     -moz-border-radius: $radius;
+	      -ms-border-radius: $radius;
+	          border-radius: $radius;
+	}
